@@ -15,8 +15,8 @@ form.addEventListener("submit", handleSubmit);
 function handleSubmit(event) {
   event.preventDefault();
 
-  let { email, password }  = event.target.elements;
-
+ let {
+    elements: { email, password } } = event.currentTarget;
   if (email.value === "" || password.value === "") {
     alert('Empty field');
   }
@@ -25,5 +25,5 @@ function handleSubmit(event) {
   const dataUser = { email, password } ;
 
   console.log(dataUser);
-  event.target.reset();
+  event.currentTarget.reset();
 }
