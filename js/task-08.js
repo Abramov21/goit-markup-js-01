@@ -20,10 +20,10 @@ function handleSubmit(event) {
   if (email.value === "" || password.value === "") {
     alert('Empty field');
   }
-  email = email.value;
+  else{email = email.value;
   password = password.value;
   const dataUser = { email, password } ;
 
   console.log(dataUser);
-  event.currentTarget.reset();
+  event.currentTarget.reset();}
 }
